@@ -40,6 +40,10 @@ The installer is created in the `dist` folder.
 | Decoration mode / Widget mode | Right-click menu |
 | Theme, always on top, quit | Right-click menu |
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 ## Credits
 
 The Outfit font is bundled under the SIL Open Font License.
