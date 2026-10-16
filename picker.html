@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Custom theme</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:18px;background:#1c1c20;color:#e8e8ee;font-family:system-ui,sans-serif;user-select:none;display:flex;flex-direction:column;align-items:center;gap:16px}
+.wh{position:relative;width:220px;height:220px}
+canvas{display:block;border-radius:50%;cursor:crosshair;touch-action:none}
+#mk{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1.5px #000,inset 0 0 0 1px #0006;pointer-events:none}
+.sl{width:220px;display:flex;flex-direction:column;gap:6px;font-size:13px;opacity:.9}
+input[type=range]{width:100%;accent-color:#b9a4ff}
+.row{display:flex;align-items:center;gap:10px;width:220px}
+#sw{width:34px;height:34px;border-radius:8px;border:2px solid #fff4}
+#hx{font-family:ui-monospace,Consolas,monospace;font-size:15px;letter-spacing:.04em}
+button{margin-left:auto;padding:8px 18px;border:0;border-radius:8px;background:#e8e8ee;color:#1c1c20;font-weight:600;cursor:pointer}
+button:hover{background:#fff}
+</style>
+</head>
+<body>
+<div class="wh"><canvas id="wheel" width="220" height="220"></canvas><div id="mk"></div></div>
+<div class="sl"><span>Brightness</span><input id="v" type="range" min="6" max="100" value="80"></div>
+<div class="row"><div id="sw"></div><span id="hx">#000000</span><button id="done">Done</button></div>
+<script src="picker.js"></script>
+</body>
+</html>

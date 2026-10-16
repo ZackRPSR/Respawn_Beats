@@ -1,0 +1,38 @@
+{
+  "name": "mini-player",
+  "version": "0.1.0",
+  "description": "Respawn Beats - desktop music widget",
+  "author": "Hamza",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis",
+    "pack": "electron-builder --win dir"
+  },
+  "build": {
+    "appId": "com.hamza.miniplayer",
+    "productName": "Respawn Beats",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "index.html",
+      "picker.html",
+      "picker.js",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.7.2",
+    "electron-builder": "^26.15.3"
+  }
+}
